@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" media="all" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="all"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <title>BarCodeGen</title>
+      </head>
+
+    <body>
+
+        <header><h1 class="center-align">BarCodeGen</h1></header>
+        <main>
+            <div>
+                <div class="container">
+                    <form class="center-align" action="result.html" target="_blank" method="GET">
+                        <br>
+
+                        <label for="lotcode">Lot Code(last 4 digits):</label><br>
+                        <input type="number" id="lotcode" name="lotcode" placeholder="ex:1234" required>
+                        <br>
+
+                        <label for="weight">Weight of box in kilograms:</label><br>
+                        <input type="number" step=".01" id="weight" name="weight" placeholder="ex:1.56" required>
+                        <br>
+
+                        <div class = "row">
+                            <label>Select shift</label>
+                            <select class = "browser-default" id="shiftid" name="shiftid" required>
+                               <option value = "" disabled selected>Shift</option>
+                               <option value = "S1">Shift 1</option>
+                               <option value = "S2">Shift 2</option>
+                               <option value = "S3">Shift 3</option>
+                            </select>
+                         </div>
+                        
+                        <label for="productiondate">Production date:</label>
+                        <input type="date" id="productiondate" name="productiondate" required>
+                        <br>
+
+                        <label for="expdate">Expiration date:</label>
+                        <input type="date" id="expdate" name="expdate" required>
+                        <br>
+                        
+
+                        <input class="waves-effect waves-light btn" type="submit" id="" name="button" value="Generate">
+                      </form>
+                </div>
+            </div>
+        </main>
+        
+
+      <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    </body>
+        
+  </html>
