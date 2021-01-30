@@ -23,7 +23,7 @@ window.addEventListener('load', () => {
     var finDate = refractDate(productiondate);
     var finWeight = refractWeight(weight);
     
-    var finalLotCode = `11${finDate}1050000000${lotcode}${shiftid}`;
+    var finalLotCode = `11${finDate}10${lotcode}${shiftid}`;
     var finalExpirationDateCode =`3102000${finWeight}17${finExp}`;
     
     JsBarcode("#lot-code", finalLotCode, {format: "CODE128A"});
